@@ -30,19 +30,22 @@ SECRET_KEY = 'django-insecure-efru+$99hz*p6_94p4$&jmk@^8^r=skg104^t2u&$h3*35q4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG') == 'True'
 DEBUG = 'RENDER' not in os.environ
-#DEBUG = True
+DEBUG = True
 print(DEBUG)
 URL = os.environ.get('URL')
 
 if DEBUG:
     ALLOWED_HOSTS = []
+    # SACAR LUEGO
+    RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 else:
     ALLOWED_HOSTS = []
     RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
     if RENDER_EXTERNAL_HOSTNAME:
         ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
-    ALLOWED_HOSTS.append(URL)
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 print(ALLOWED_HOSTS)
 
@@ -95,7 +98,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-if DEBUG:
+if not DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
