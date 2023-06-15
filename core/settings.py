@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-efru+$99hz*p6_94p4$&jmk@^8^r=skg104^t2u&$h3*35q4'
 DEBUG = os.environ.get('DEBUG') == 'True'
 DEBUG = 'RENDER' not in os.environ
 #DEBUG = True
-
+print(DEBUG)
 URL = os.environ.get('URL')
 
 if DEBUG:
@@ -44,7 +44,7 @@ else:
 
     ALLOWED_HOSTS.append(URL)
 
-
+print(ALLOWED_HOSTS)
 
 # Application definition
 
