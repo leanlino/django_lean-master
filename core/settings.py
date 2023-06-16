@@ -28,26 +28,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-efru+$99hz*p6_94p4$&jmk@^8^r=skg104^t2u&$h3*35q4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG') == 'True'
+#DEBUG = os.environ.get('DEBUG') == 'True'
 DEBUG = 'RENDER' not in os.environ
-DEBUG = True
+#DEBUG = True
 print(DEBUG)
 URL = os.environ.get('URL')
 
-if DEBUG:
-    ALLOWED_HOSTS = []
-    # SACAR LUEGO
+ALLOWED_HOSTS = []
+if not DEBUG:    
     RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-else:
-    ALLOWED_HOSTS = []
-    RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-    if RENDER_EXTERNAL_HOSTNAME:
-        ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-
+    
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
-print(ALLOWED_HOSTS)
 
 # Application definition
 
