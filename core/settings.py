@@ -32,9 +32,9 @@ SECRET_KEY = 'django-insecure-efru+$99hz*p6_94p4$&jmk@^8^r=skg104^t2u&$h3*35q4'
 DEBUG = 'RENDER' not in os.environ
 DEBUG = True
 print(DEBUG)
-URL = os.environ.get('www.hommy.ar')
+URL = os.environ.get('URL')
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1',]
+ALLOWED_HOSTS = ['localhost','127.0.0.1','www.hommy.ar']
 #if not DEBUG: 
 if DEBUG:   
     RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
