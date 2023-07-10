@@ -9,4 +9,4 @@ def submit(request):
         print(request.POST)
         
         return redirect('home')
-    return render(request, 'pages/contact.html')
+    return render(request, 'component/form.html')

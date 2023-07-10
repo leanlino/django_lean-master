@@ -162,7 +162,7 @@ a:hover {
 .line-mf {
   width: 40px;
   height: 5px;
-  background-color: #0078ff;
+  background-color: rgba(99, 197, 189, 0.87);
   margin: 0 auto;
 }
 
@@ -502,7 +502,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
+  color: #73cccf;
   font-size: 16px;
   font-weight: 600;
   padding: 0;

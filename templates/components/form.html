@@ -1,0 +1,87 @@
+{% load static %}
+
+<input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+<section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            
+            <div id="contact" class="box-shadow-full bg-image"
+            style= "background-image: url('../../static/img/foto_contacto.jpg');"> <!--COLOR FORMULARIO-->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Envianos tu consulta
+                    </h5>
+                  </div>
+                  <div>
+                    <form action="" method="post" role="form" class="php-email-form" id="formulario">
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required />
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required />
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Teléfono" required />
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12 text-center my-3">
+                          <div class="loading">Loading</div>
+                          <div class="error-message"></div>
+                          <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                          <button type="submit" class="button button-a button-big button-rouded">Enviar mensage</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">
+                      Dónde nos encontrás
+                    </h5>
+                  </div>
+                  <div class="more-info">
+                    <p><strong>Para saber más de nuestros productos, contactanos por mail, whatsapp o envianos un mensaje y te responderemos a la brevedad. También podés visitar nuestras redes sociales.</strong></p>
+                      
+                    
+            
+                    <ul class="list-ico">
+                      <li><span class="bi bi-geo-alt"></span> Dante 4381, Caseros. Bs. As.</li>
+                      <li><span class="bi bi-phone"></span> +5491167255881</li>
+                      <li><span class="bi bi-envelope"></span> hommy.arg@gmail.com</li>
+                    </ul>
+                  </div>
+                  <div class="socials">
+                    <ul class='d-flex justify-content-center gap-5'>
+                      <li><a href="https://www.facebook.com/hommy.argentina?mibextid=ZbWKwL"><i class="bi bi-facebook h2"></i></a></li>
+                      <li><a href="https://instagram.com/hommy.arg"><i class="bi bi-instagram h2"></i></a></li>
+                      <li><a href="https://www.linkedin.com/in/hommy-argentina-430860279"><i class="bi bi-linkedin h2"></i></a></li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
