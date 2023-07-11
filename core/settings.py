@@ -93,11 +93,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 if 'RENDER' not in os.environ:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+    'default': dj_database_url.config(
+        
+        default='postgres://database_django_user:AHXbq4W4uesturfcoEhWudHkxb5ZWxUU@dpg-ci5o9clgkuvgpfd9j9a0-a.oregon-postgres.render.com/database_django',
+        conn_max_age=600
+    )}
 else:
     DATABASES = {
     'default': dj_database_url.config(
