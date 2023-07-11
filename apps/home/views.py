@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from .models import Contacto
 import json
@@ -25,6 +25,6 @@ def formulario(request):
             message = contacto_diccionario['message']
         )
         contacto.save()
-        return JsonResponse({'success':'OK'}, status=200)
+        return redirect('home')
     
     
