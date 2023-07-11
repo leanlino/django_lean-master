@@ -101,8 +101,8 @@ if 'RENDER' not in os.environ:
 else:
     DATABASES = {
     'default': dj_database_url.config(
-        # Feel free to alter this value to suit your needs.
-        default='postgresql://postgres:postgres@localhost:5432/core',
+        
+        default='postgres://database_django_user:AHXbq4W4uesturfcoEhWudHkxb5ZWxUU@dpg-ci5o9clgkuvgpfd9j9a0-a/database_django',
         conn_max_age=600
     )
 }

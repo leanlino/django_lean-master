@@ -28,39 +28,28 @@
     {% include "components/footer.html" %}
 </body>
 <style>
-    /* .whatsapp-float {
-      background-color: green;
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 40px;
-      right: 40px;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 24px;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    } */
     .whatsapp-float {
-        height: 3em;
-        background-color: #25d366;
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        font-size: 18px;
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+          height: 3em;
+          background-color: #25d366;
+          position: fixed;
+          bottom: 40px;
+          right: 40px;
+          font-size: 16px;
+          z-index: 100;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        } 
+    .whatsapp-float:hover {
+        background-color: rgb(88, 88, 253);
+        color: white;
+    }     
 </style>
 </head>
 
 </head>
 
-<a href="https://api.whatsapp.com/send?phone=5491167255881" class="tn btn-floating btn-bprimary whatsapp-float"
+<a href="https://api.whatsapp.com/send?phone=5491167255881" class="btn btn-floating btn-bprimary whatsapp-float"
     target="_blank">
     <!-- <i class="bi bi-whatsapp" style="line-height: inherit;"></i> -->
     <span>¿Cómo podemos ayudarte? <i class="bi bi-whatsapp" style="line-height: inherit;"></i></span>
